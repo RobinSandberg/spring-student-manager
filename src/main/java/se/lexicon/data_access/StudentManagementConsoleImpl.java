@@ -21,6 +21,10 @@ public class StudentManagementConsoleImpl implements StudentManagement {
         student.setId(++counterId);
         System.out.print("Type in your name: ");
         student.setName(userInputService.getString());
+        while (student.getName().isEmpty()){
+            System.out.print("Invalid name try again: ");
+            student.setName(userInputService.getString());
+        }
         return student;
     }
 
@@ -32,15 +36,13 @@ public class StudentManagementConsoleImpl implements StudentManagement {
 
     @Override
     public Student find(int id) {
-        Student student;
-        student = studentDao.find(id);
+        Student student = studentDao.find(id);
         return student;
     }
 
     @Override
     public Student remove(int id) {
-        Student student;
-        student = find(id);
+        Student student = find(id);
         if(student != null) {
             studentDao.delete(student.getId());
         }

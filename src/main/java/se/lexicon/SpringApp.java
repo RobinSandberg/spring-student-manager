@@ -32,6 +32,8 @@ public class SpringApp
                     if (input == 1){
                         student = studentManagement.save(student);
                         System.out.println(student.toString() + " has been saved.");
+                    }else{
+                        System.out.println(student.toString() + " was not saved.");
                     }
                     break;
                 case 2:
