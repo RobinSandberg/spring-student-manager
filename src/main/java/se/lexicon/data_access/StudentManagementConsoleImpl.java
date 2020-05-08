@@ -67,5 +67,6 @@ public class StudentManagementConsoleImpl implements StudentManagement {
                 "\n4. Find student by id." +
                 "\n5. Find all students." +
                 "\n6. Exit student manager.");
+        System.out.print("Make your choose: ");
     }
 }

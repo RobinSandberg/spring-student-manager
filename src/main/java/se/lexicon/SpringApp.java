@@ -28,6 +28,7 @@ public class SpringApp
                     student = studentManagement.create();
                     System.out.println("Do you wanna save following " + student.toString()
                     + "\n1. Yes \n2. No");
+                    System.out.print("Make your choose: ");
                     input = userInputService.getInt();
                     if (input == 1){
                         student = studentManagement.save(student);
