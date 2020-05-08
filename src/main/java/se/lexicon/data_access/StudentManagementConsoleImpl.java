@@ -30,14 +30,12 @@ public class StudentManagementConsoleImpl implements StudentManagement {
 
     @Override
     public Student save(Student student) {
-        student = studentDao.save(student);
-        return student;
+       return studentDao.save(student);
     }
 
     @Override
     public Student find(int id) {
-        Student student = studentDao.find(id);
-        return student;
+        return studentDao.find(id);
     }
 
     @Override
